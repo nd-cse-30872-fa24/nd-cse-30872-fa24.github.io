@@ -25,3 +25,5 @@
 - name:     Mark Schermerhorn
   netid:    mscherm2 
   github:   mscherm2
+  conflicts:
+    - dscherme
