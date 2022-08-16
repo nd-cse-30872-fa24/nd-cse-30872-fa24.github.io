@@ -4,8 +4,19 @@
         topics:         Syllabus, I/O
         assignments:
           - Reading 00
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/10wOlND3jCN9jn1EZB3hsMJCLZyZFFfZr7UmLe0DL61k/edit?usp=sharing
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1HkUSuYkob8u5yyOLfhAKu5VRl9f2nwvXflz85_MtS6w/edit?usp=sharing
+
       - date:           Fri 08/26
         topics:         Complexity, Coding Style
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1-LaBQI-AQG--njIjFdcoxSl9FjlYSqkXI8aKmO8VFQ4/edit?usp=sharing
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1Hpj6nVhQsbO8gHe1-BinNbQ71nKC7IU1PM4a3iwH1Tc/edit?usp=sharing
 
       - date:           Sat 08/27
         assignments:
