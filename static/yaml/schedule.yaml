@@ -30,12 +30,21 @@
         topics:         Arrays, Lists
         assignments:
           - Reading 01
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1DxsKBEFkPAloiL894onMYEDCb8emZ8ucXc6QDLk1r_Q/edit?usp=sharing
 
       - date:           Wed 08/31
         topics:         Stacks, Queues
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1lzuMS5Pe7HD34D5nTyCoTNmTudIP9e8fprLY_Ezp_4o/edit?usp=sharing
 
       - date:           Fri 09/02
         topics:         Debugging
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1ZcqBvUAqhj0MOogMCHinV7b5A2DkTT636Uoa5CO-96g/edit?usp=sharing
 
       - date:           Sat 09/03
         assignments:
