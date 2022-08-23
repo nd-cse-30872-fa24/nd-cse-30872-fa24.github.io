@@ -1,6 +1,9 @@
 title:      Reading 00 - TA Assignment
 icon:       fa-balance-scale
-navigation: []
+navigation:           
+  - name: "Home"      
+    link: "index.html"
+    icon: "fa-gavel"  
 internal:
 external:
     mapping:  static/yaml/reading00.yaml

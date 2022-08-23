@@ -1,6 +1,9 @@
 title:      "Challenge 00: Maximum Four Square"
 icon:       fa-code
-navigation: []
+navigation:           
+  - name: "Home"      
+    link: "index.html"
+    icon: "fa-gavel"  
 internal:
 external:
 body:       |
