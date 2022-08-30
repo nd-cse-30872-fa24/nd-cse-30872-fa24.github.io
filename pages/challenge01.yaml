@@ -105,7 +105,7 @@ body:       |
     <tbody markdown="1">
     <tr markdown="1">
     <td width="125px" markdown="1">**Time Complexity**</td>
-    <td markdown="1">`O(W)`, where `W` corresponds to the number of **words** in each input test case.
+    <td markdown="1">`O(WN)`, where `W` corresponds to the number of **words** and `N` corresponds to the **number** of characters in the largest word in each input test case.
     </tr>
     <tr markdown="1">
     <td markdown="1">**Space Complexity**</td>
