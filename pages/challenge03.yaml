@@ -5,22 +5,22 @@ internal:
 external:
 body:       |
 
-    <img src="static/img/challenge03-array.png" class="pull-right" width="200px">
+    <img src="static/img/challenge03-sam.jpg" class="pull-right">
 
     Not content with a job at a **hot** Silicon Valley startup, **Sam** is
     still grinding **hard** on [LeetCode] challenges[^1] in hopes of leveling
     up to another software engineering gig.  In fact, he was *geeking* out on
     their **30-day Challenge** during the month of May and came across this problem:
-
-    > Suppose an array sorted in ascending order is rotated at some pivot
-    > unknown to you beforehand.
+    
+    > <img src="static/img/challenge03-array.png" class="pull-left" width="200px">
     >
-    > (i.e., `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`).
+    > Suppose an array of unique numbers sorted in ascending order is rotated
+    > at some pivot unknown to you beforehand.
+    >
+    > For instance, `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`.
     >
     > You are given a `target` value to search. If found in the array report its
     > `index`, otherwise report it is not found.
-    >
-    > You may assume no duplicates exist in the array.
 
     Because *Sam* is busy networking with people on [LinkedIn], he asks that
     you repay him for the help he provided you in [Systems Programming] by
