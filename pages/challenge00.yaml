@@ -68,7 +68,7 @@ body:       |
         4 1 4
         0 0
 
-    This sample input corresponds to the matrixes in the diagram above.
+    This sample input corresponds to the matrices in the diagram above.
 
     <div class="alert alert-warning" markdown="1">
     **Note**: The input is terminated by a final `0 0` for the `N` and `M` values.
@@ -219,7 +219,7 @@ body:       |
         $ ./program < input.txt | diff -u - output.txt
 
     To access a special debugging mode of the `check.py` script, you can use
-    the following to get the output ofr [dredd].
+    the following to get the output of [dredd].
 
         :::bash
         # Get debugging output from dredd

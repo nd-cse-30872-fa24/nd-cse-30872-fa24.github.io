@@ -82,7 +82,7 @@ body:       |
 
     Because you are [CSE] students, however, [Ramzi] wants you to automate the
     process of determining the maximum number of concurrent events given a
-    series of time intervals in softare and he wants you to make sure it runs
+    series of time intervals in software and he wants you to make sure it runs
     in `O(nlogn)` time (*for each sequence of time intervals*).
 
     [Ramzi]: https://engineering.nd.edu/faculty/ramzi-bualuan/
@@ -121,7 +121,7 @@ body:       |
 
     ## Output
 
-    For each test case, output the maximum number of concurrents for that test
+    For each test case, output the maximum number of concurrent events for that test
     case as shown in the sample output below:
 
         ::text

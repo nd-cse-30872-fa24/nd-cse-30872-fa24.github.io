@@ -128,7 +128,7 @@ body:       |
         To remotely access your repository from the command-line, you have two options:
 
         1. [Setup a Personal Access Token]: With this method, [GitHub] will
-          generate an application specific passsword that you can use with
+          generate an application specific password that you can use with
           **HTTPS**.  As the **PAT** is a long string of characters, it is
           recommended that you use it in conjunction with a **password
           manager** or **keyring**.
