@@ -41,16 +41,13 @@
             link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0d2c07fc-41c1-414b-a23d-af000114e7c0
 
       - date:           Wed 08/31
+        topics:         Cancelled
+
+      - date:           Fri 09/02
         topics:         Stacks, Queues
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1lzuMS5Pe7HD34D5nTyCoTNmTudIP9e8fprLY_Ezp_4o/edit?usp=sharing
-
-      - date:           Fri 09/02
-        topics:         Debugging
-        items:
-          - name:       Slides
-            link:       https://docs.google.com/presentation/d/1ZcqBvUAqhj0MOogMCHinV7b5A2DkTT636Uoa5CO-96g/edit?usp=sharing
 
       - date:           Sat 09/03
         assignments:
@@ -63,9 +60,15 @@
         topics:         Searching
         assignments:
           - Reading 02
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1xs4rf3GnBVoBjUFOlbO-mXU_lq_tRJ7GWPwo1huS0XI/edit?usp=sharing
 
       - date:           Wed 09/07
         topics:         Sorting
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1c8duDG_JRQTOSQCSXNltK-rauwGEEGBtgF7pHwuupMA/edit?usp=sharing
 
       - date:           Fri 09/19
         topics:         Testing
