@@ -93,12 +93,22 @@
         topics:         Maps, Sets
         assignments:
           - Reading 03
+        topics:         Sorting
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1ePY7bNFwdvDaatqo9vyx9rlVpC6YwOBBUv-2VwX87yw/edit?usp=sharing
 
       - date:           Wed 09/14
         topics:         Memoization, Profiling
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1ePY7bNFwdvDaatqo9vyx9rlVpC6YwOBBUv-2VwX87yw/edit?usp=sharing
 
       - date:           Fri 09/16
         topics:         History
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1ePY7bNFwdvDaatqo9vyx9rlVpC6YwOBBUv-2VwX87yw/edit?usp=sharing
 
       - date:           Sat 09/17
         assignments:
