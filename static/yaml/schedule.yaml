@@ -123,6 +123,9 @@
         topics:         Subsets
         assignments:
           - Reading 04
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1jlDiEL5PiIXOwY9wHrYnyTHiy_mz3JFd4ceTPVKegtk/edit?usp=sharing
 
       - date:           Wed 09/21
         topics:         Permutations, Backtracking
