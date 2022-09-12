@@ -99,6 +99,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1ePY7bNFwdvDaatqo9vyx9rlVpC6YwOBBUv-2VwX87yw/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ce66d519-a15f-4991-9da1-af0e0111e7c2
 
       - date:           Wed 09/14
         topics:         Memoization, Profiling
