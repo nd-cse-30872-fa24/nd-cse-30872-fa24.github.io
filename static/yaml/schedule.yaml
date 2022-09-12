@@ -150,6 +150,9 @@
         topics:         Bit Manipulation
         assignments:
           - Reading 05
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/16phiiZ9pOjapHyHA8dXBazR_eKNjz7_aKLxMsoDVLEE/edit?usp=sharing
 
       - date:           Wed 09/28
         topics:         Greedy Algorithms
