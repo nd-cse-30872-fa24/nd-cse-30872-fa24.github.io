@@ -156,6 +156,9 @@
 
       - date:           Wed 09/28
         topics:         Greedy Algorithms
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1Mq8A5hAvEROjmO_4-z2fAKSYEVu8Nm0g7IRTFUze6rw/edit?usp=sharing
 
       - date:           Fri 09/30
         topics:         Documentation
