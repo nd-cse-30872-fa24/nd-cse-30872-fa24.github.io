@@ -1,6 +1,9 @@
 title:      "Challenge 10: Candies"
 icon:       fa-code
-navigation: []
+navigation:
+  - name: "Home"
+    link: "index.html"
+    icon: "fa-gavel"
 internal:
 external:
 body:       |
