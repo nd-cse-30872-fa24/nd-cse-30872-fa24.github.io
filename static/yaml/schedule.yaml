@@ -132,6 +132,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1jlDiEL5PiIXOwY9wHrYnyTHiy_mz3JFd4ceTPVKegtk/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=24732681-0057-46aa-ad63-af150111c79b
 
       - date:           Wed 09/21
         topics:         Permutations, Backtracking
