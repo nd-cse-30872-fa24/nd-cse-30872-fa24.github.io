@@ -248,6 +248,9 @@
 
       - date:           Wed 10/26
         topics:         Traversal
+        items:
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c687335b-16dd-43dc-892b-af3a0114c320
 
       - date:           Fri 10/28
         topics:         Divide and Conquer
