@@ -273,10 +273,10 @@
             link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=686df24f-ea8b-4460-af6b-af3f0110de2b
 
       - date:           Wed 11/02
-        topics:         Traversal, Shortest Paths
+        topics:         Traversal
 
       - date:           Fri 11/04
-        topics:         Office Hours
+        topics:         Shortest Paths
 
       - date:           Sat 11/05
         assignments:
