@@ -269,12 +269,14 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/16K7s0K-MTjKP_dV3Xy1IovbXNWI_rWvAXW9e87qHOSY/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=686df24f-ea8b-4460-af6b-af3f0110de2b
 
       - date:           Wed 11/02
-        topics:         Traversal
+        topics:         Traversal, Shortest Paths
 
       - date:           Fri 11/04
-        topics:         Shortest Paths
+        topics:         Office Hours
 
       - date:           Sat 11/05
         assignments:
