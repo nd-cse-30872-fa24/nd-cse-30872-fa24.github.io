@@ -268,7 +268,7 @@
           - Reading 08
         items:
           - name:       Slides
-            item:       https://docs.google.com/presentation/d/16K7s0K-MTjKP_dV3Xy1IovbXNWI_rWvAXW9e87qHOSY/edit?usp=sharing
+            link:       https://docs.google.com/presentation/d/16K7s0K-MTjKP_dV3Xy1IovbXNWI_rWvAXW9e87qHOSY/edit?usp=sharing
 
       - date:           Wed 11/02
         topics:         Traversal
@@ -287,6 +287,9 @@
         topics:         Spanning Trees
         assignments:
           - Reading 09
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/154zJqLI2KL1s4Gt-BzVq40mE5rXRdPW54OWEpgptXX0/edit?usp=sharing
 
       - date:           Wed 11/09
         topics:         Topological Sorting
