@@ -274,6 +274,9 @@
 
       - date:           Wed 11/02
         topics:         Traversal
+        items:
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b2a86534-dbfb-4598-8b5a-af410116313c
 
       - date:           Fri 11/04
         topics:         Shortest Paths
