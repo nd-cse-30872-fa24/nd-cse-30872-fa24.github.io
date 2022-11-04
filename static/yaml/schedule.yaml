@@ -280,6 +280,9 @@
 
       - date:           Fri 11/04
         topics:         Shortest Paths
+        items:
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=44ad9416-26e0-4f45-9360-af43010deb1b
 
       - date:           Sat 11/05
         assignments:
