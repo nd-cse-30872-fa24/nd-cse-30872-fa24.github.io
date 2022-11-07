@@ -1,6 +1,9 @@
 title:      "Challenge 19: Hamiltonian Cycle"
 icon:       fa-code
-navigation: []
+navigation:
+  - name: "Home"
+    link: "index.html"
+    icon: "fa-gavel"
 internal:
 external:
 body:       |

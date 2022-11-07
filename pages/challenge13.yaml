@@ -1,6 +1,9 @@
 title:      "Challenge 13: Taeho's Tree"
 icon:       fa-code
-navigation: []
+navigation:
+  - name: "Home"
+    link: "index.html"
+    icon: "fa-gavel"
 internal:
 external:
 body:       |

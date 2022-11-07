@@ -1,6 +1,9 @@
 title:      "Challenge 22: Least Perfect Squares"
 icon:       fa-code
-navigation: []
+navigation:
+  - name: "Home"
+    link: "index.html"
+    icon: "fa-gavel"
 internal:
 external:
 body:       |
