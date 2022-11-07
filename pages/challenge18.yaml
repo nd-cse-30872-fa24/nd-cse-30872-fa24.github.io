@@ -118,11 +118,11 @@ body:       |
     <tbody markdown="1">
     <tr markdown="1">
       <td markdown="1">**Time Complexity**</td>
-      <td markdown="1">`O(V+E)`, where `V` is the number of digits in the passcode and `E` is the number of edges in **DAG**.</td>
+      <td markdown="1">`O(V+E)`, where `V` is the number of packages and `E` is the number of dependencies in **DAG**.</td>
     </tr>
     <tr markdown="1">
       <td markdown="1">**Space Complexity**</td>
-      <td markdown="1">`O(V)`, where `V` is the number of digits in the passcode.</td>
+      <td markdown="1">`O(V)`, where `V` is the number of packages.</td>
     </tr>
     </tbody>
     </table>
