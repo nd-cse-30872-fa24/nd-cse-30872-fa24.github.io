@@ -303,6 +303,9 @@
 
       - date:           Wed 11/09
         topics:         Topological Sorting
+        items:
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fb59f2d2-475d-4b16-8bae-af4801252f14
 
       - date:           Fri 11/11
         topics:         Office Hours
