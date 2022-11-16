@@ -329,6 +329,9 @@
 
       - date:           Wed 11/16
         topics:         Flows and Cuts
+        items:
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bc77c08d-3c50-475f-8af4-af4f01234226
 
       - date:           Fri 11/18
         topics:         Office Hours
