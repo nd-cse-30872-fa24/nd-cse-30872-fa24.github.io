@@ -347,6 +347,9 @@
         topics:         Primes and Modular Arithmetic
         assignments:
           - Reading 11
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/18FUyj3TUK_iRIZTycIo81albN0PETbKP5Qe1RLQ1b2A/edit?usp=sharing
 
       - date:           Wed 11/23
         topics:         Thanksgiving
