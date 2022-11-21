@@ -106,6 +106,32 @@ body:       |
         10
         11
 
+    ## Simon's Stack Algorithm
+
+    If you want to avoid building a **tree**, you can use the following
+    **stack** based approached developed by **Simon Rodriguez** in **2021**:
+
+        :::python
+        ParseExpression(Line):
+            Characters = Line.Characters()
+            Stack      = []
+            for Token in ParseToken(Characters):
+                if Token is ')':
+                    Expression = [Stack.Pop() until we reach '(']
+                    Result     = EvaluateExpression(Expression)
+                    Stack.Push(Result)
+                else:
+                    Stack.Push(Token)
+            return int(Stack.top())
+
+        ParseToken(Characters):
+            # Given ['(', '+', ' ', '1', '2', ')']
+            # Return next non-whitespace character (while consuming Characters)
+
+        EvaluateExpression(Expression):
+            # Given [Operand, Argument0, Argument1, ...] or [Integer]
+            # Return evaluated expression```
+
     ## Submission
 
     To submit your work, follow the same procedure you used for [Reading 00]:
