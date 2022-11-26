@@ -362,10 +362,16 @@
 - name:     Miscellaneous
   days:
       - date:           Mon 11/28
-        topics:         Contracts, Salaries, Negotiation
+        topics:         Negotiation, Contracts, Promotion, Mobility
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1Kw1IQd4tV09dVJkK6aKlzmF6_3C__fApHDL9ng9tdps/edit?usp=sharing
 
       - date:           Wed 11/30
         topics:         Graduate School
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1sz5rjj0SbIQuHi8BNXaD_SZstaT9i2plg8yRmLnVeKo/edit?usp=sharing
 
       - date:           Fri 12/01
         topics:         Slacking and Hacking
