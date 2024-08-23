@@ -30,7 +30,7 @@
 
 - name:     Sequence Containers
   days:
-      - date:           Mon 08/29
+      - date:           Mon 09/03
         topics:         Arrays, Lists
         assignments:
           - Reading 01
