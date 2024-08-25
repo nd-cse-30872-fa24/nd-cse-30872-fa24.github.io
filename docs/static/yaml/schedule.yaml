@@ -41,15 +41,20 @@
             link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0d2c07fc-41c1-414b-a23d-af000114e7c0
 
       - date:           Wed 09/04
-        topics:         Cancelled
-
-      - date:           Fri 09/06
         topics:         Stacks, Queues
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1lzuMS5Pe7HD34D5nTyCoTNmTudIP9e8fprLY_Ezp_4o/edit?usp=sharing
           - name:       Panopto
             link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a03468d9-4331-4e6e-8a1f-af04011986db
+
+      - date:           Fri 09/06
+        topics:         Testing
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1uo1ke4YkCc7unw8jPlEryyL_lielXLRANLn6VaRxnIw/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=30ba6a5a-698c-4893-aaa4-af0b011159e8
 
       - date:           Sun 09/08
         assignments:
@@ -77,12 +82,7 @@
             link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=164dadc9-a3f4-4842-8d11-af090114e444
 
       - date:           Fri 09/13
-        topics:         Testing
-        items:
-          - name:       Slides
-            link:       https://docs.google.com/presentation/d/1uo1ke4YkCc7unw8jPlEryyL_lielXLRANLn6VaRxnIw/edit?usp=sharing
-          - name:       Panopto
-            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=30ba6a5a-698c-4893-aaa4-af0b011159e8
+        topics:         Cancelled
 
       - date:           Sun 09/15
         assignments:
