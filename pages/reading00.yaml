@@ -345,14 +345,14 @@ body:       |
         **New pull request** button for the appropriate branch:
 
             <div class="thumbnail">
-            <img src="static/img/github-branches.png" class="img-responsive"/>
+            <img src="static/img/pr_step_1.png" class="img-responsive"/>
             </div>
 
         - Next, edit the **pull request** title to "Reading 00", write a
           comment if necessary and then press the "Create pull request" button.
 
             <div class="thumbnail">
-            <img src="static/img/pr_step_1.png" class="img-responsive"/>
+            <img src="static/img/pr_step_2.png" class="img-responsive"/>
             </div>
 
         - Finally, assign the **pull request** to the **teaching assistant**
@@ -360,7 +360,7 @@ body:       |
           **passed**.
 
             <div class="thumbnail">
-            <img src="static/img/pr_step_2.png" class="img-responsive"/>
+            <img src="static/img/pr_step_3.png" class="img-responsive"/>
             </div>
 
         - Every commit on [GitHub] will automatically check your quiz or code with
