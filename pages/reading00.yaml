@@ -119,7 +119,7 @@ body:       |
     machine (or the **student** machines:
 
             :::bash
-            $ git clone git@github.com:nd-cse-30872-fa24/cse-30872-fa24-assignments-$USERNAME.git
+            $ git clone git@github.com:nd-cse-30872-fa24/assignments-$USERNAME.git
 
         <div class="alert alert-danger" markdown="1">
         **Note**, that [GitHub] has recently shutdown [password authentication].
