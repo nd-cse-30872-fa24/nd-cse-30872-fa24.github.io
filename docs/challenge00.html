@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Challenge 00: Maximum Four Square</title>
+	<title>Challenge 00: Minimum Four Square</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="static/css/blugold.css" rel="stylesheet">
@@ -35,33 +35,33 @@
 			<li><a href="index.html"><i class="fa fa-gavel"></i> <span class="visible-md-inline visible-lg-inline">Home</span></a></li>
 			
 		    </ul>
-		    <h1><i class="fa fa-code"></i> Challenge 00: Maximum Four Square</h1>
+		    <h1><i class="fa fa-code"></i> Challenge 00: Minimum Four Square</h1>
 		</div>
 	    </div>
 
             
-<p><img src="static/img/challenge00-maximum-four-square.png" class="pull-right" width="400px"></p>
+<p><img src="static/img/challenge01-minimum-four-square.png" class="pull-right" width="400px"></p>
 <p>You just can't escape the <a href="https://en.wikipedia.org/wiki/The_Matrix_(franchise)">Matrix</a>.  Even in your sleep, you still have
 nightmares of visiting the <code>ORACLE</code> and banging your head against the wall
-doing the assignments in <a href="https://www3.nd.edu/~pbui/teaching/cse.20289.sp22/">Systems Programming</a>.  You are hopeful that the
+doing the assignments in <a href="https://www3.nd.edu/~pbui/teaching/cse.20289.sp21/">Systems Programming</a>.  You are hopeful that the
 instructor is even more <strong>respectful</strong> of your time outside of class, but
 you have your doubts...</p>
 <p>Fortunately, in this problem, you are dealing with a different type of <strong>matrix</strong>:</p>
 <blockquote>
 <p>Given an <code>n x m</code> 2D <strong>matrix</strong> consisting of numbers between <code>1</code> and <code>9</code>,
-find the <strong>maximum four square</strong>.  That is, find the largest total of four
+find the <strong>minimum four square</strong>.  That is, find the smallest total of four
 adjacent cells in the given <strong>matrix</strong> as shown to the right.</p>
 </blockquote>
 <p>In the first example to the right, there is only one <strong>four square</strong>
-consisting of all <code>1</code>s, so the <strong>maximum four square</strong> has a total of <code>4</code>.</p>
+consisting of all <code>1</code>s, so the <strong>minimum four square</strong> has a total of <code>4</code>.</p>
 <p>In the second example to the right, there are two <strong>four squares</strong>: The
   first consists of <code>1, 2, 3, 4</code>, which sums to <code>10</code>.  The second consists
-  of <code>2, 1, 4, 2</code>, which sums to <code>9</code>.  This means that the <strong>maximum four
-  square</strong> has a total of <code>10</code>.</p>
+  of <code>2, 1, 4, 2</code>, which sums to <code>9</code>.  This means that the <strong>minimum four
+  square</strong> has a total of <code>9</code>.</p>
 <p>In the third example to the right, there are four <strong>four squares</strong>.  The
 two top <strong>four squares</strong> consist of <code>1, 2, 2, 3</code> and sum to <code>8</code>, while the
 bottom <strong>four squares</strong> consist of <code>2, 3, 4, 1</code> and sum to <code>10</code>.  This
-means that the <strong>maximum four square</strong> has a total of <code>10</code>.</p>
+means that the <strong>minimum four square</strong> has a total of <code>8</code>.</p>
 <h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
 <p>You will be given a series of <strong>matrices</strong> in the following format:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>N M
@@ -88,20 +88,20 @@ in the <strong>matrix</strong>.</p>
 0 0
 </code></pre></div>
 
-<p>This sample input corresponds to the matrices in the diagram above.</p>
+<p>This sample input corresponds to the matrixes in the diagram above.</p>
 <div class="alert alert-warning">
 <p><strong>Note</strong>: The input is terminated by a final <code>0 0</code> for the <code>N</code> and <code>M</code> values.</p>
 </div>
 <h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
-<p>For each <strong>matrix</strong> in the input stream, you are to find the <strong>maximum four
+<p>For each <strong>matrix</strong> in the input stream, you are to find the <strong>minimum four
 square</strong> and print out its total in the following format:</p>
 <blockquote>
-<p>{Matrix #}. Maximum four square is: {Total of Largest Four Square}</p>
+<p>{Matrix #}. Minimum four square is: {Total of Smallest Four Square}</p>
 </blockquote>
 <p>Here is the output given the example input above:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>1. Maximum four square is: 4
-2. Maximum four square is: 10
-3. Maximum four square is: 10
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>1. Minimum four square is: 4
+2. Minimum four square is: 9
+3. Minimum four square is: 8
 </code></pre></div>
 
 <div class="alert alert-warning">
@@ -143,10 +143,10 @@ $ git push -u origin challenge00            <span style="color: #3D7B7B; font-st
 <div class="alert alert-success">
 <h4 id="programming-languages"><i class="fa fa-code"></i> Programming Languages<a class="headerlink" href="#programming-languages" title="Permanent link">&para;</a></h4>
 <p>Note, <a href="https://dredd.h4x0r.space">dredd</a> supports <a href="https://en.wikipedia.org/wiki/The_C_Programming_Language">C</a>, <a href="https://isocpp.org">C++</a>, <a href="https://www.python.org">Python</a>, <a href="https://www.oracle.com/java/index.html">Java</a>, <a href="https://www.golang.org">Go</a>, <a href="https://www.nodejs.org">Node</a>, <a href="https://www.ruby-lang.org">Ruby</a>,
-<a href="https://www.gnu.org/software/guile/">Guile</a>, <a href="https://www.haskell.org/">Haskell</a>, <a href="https://lisp-lang.org/">Common Lisp</a>, and <a href="https://www.rust-lang.org/">Rust</a>.  You may use any of those
-languages, just be sure to name your source file <code>program.$EXTENSION</code> where
-<code>$EXTENSION</code> is the appropriate file extension for your chosen language
-(e.g. <code>py</code> for <a href="https://www.python.org">Python</a>).</p>
+<a href="https://perl6.org/">Perl6</a>, and <a href="https://www.gnu.org/software/guile/">Guile</a>.  You may use any of those languages, just be sure to
+name your source file <code>program.$EXTENSION</code> where <code>$EXTENSION</code> is the
+appropriate file extension for your chosen language (e.g. <code>py</code> for
+<a href="https://www.python.org">Python</a>).</p>
 <p>If you wish to try out another language, please let the instructor know and
 support can be added to <a href="https://dredd.h4x0r.space">dredd</a>.</p>
 </div>
@@ -218,7 +218,7 @@ $ ./program &lt; input.txt | diff -u - output.txt
 </code></pre></div>
 
 <p>To access a special debugging mode of the <code>check.py</code> script, you can use
-the following to get the output of <a href="https://dredd.h4x0r.space">dredd</a>.</p>
+the following to get the output ofr <a href="https://dredd.h4x0r.space">dredd</a>.</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #3D7B7B; font-style: italic"># Get debugging output from dredd</span>
 $ <span style="color: #19177C">DEBUG</span><span style="color: #666666">=1</span> ../.scripts/check.py
 </code></pre></div>
@@ -226,9 +226,8 @@ $ <span style="color: #19177C">DEBUG</span><span style="color: #666666">=1</span
 </div>
 <div class="alert alert-success">
 <h4 id="pull-request"><i class="fa fa-github"></i> Pull Request<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h4>
-<p>Once you have committed your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
-create a <strong>pull request</strong> and assign it to the appropriate teaching
-assistant from the <a href="reading00_tas.html">Reading 00 TA List</a>.</p>
+<p>Once you have commited your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
+create a <strong>pull request</strong> and assign it to the <strong>teaching assistant</strong>.</p>
 </div>
 
 
