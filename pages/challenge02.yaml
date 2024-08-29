@@ -1,4 +1,4 @@
-title:      "Challenge 02: HTML Tags"
+title:      "Challenge 02: Supercalifragilisticexpialidocious"
 icon:       fa-code
 navigation:
   - name: "Home"
@@ -8,100 +8,79 @@ internal:
 external:
 body:       |
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/240px-HTML5_logo_and_wordmark.svg.png" class="pull-right" width="200px">
+    After enjoying watching [The Greatest Showman] outside at the [Movies on
+    the Lawn] in the [Orange County Great Park] a few years ago, the
+    instructor's children asked to watch more musicals.  Having grown up a huge
+    Disney fan, the instructor's wife showed them the classic [Mary Poppins].
 
-    You really enjoyed parsing and manipulating [HTML] using [regular
-    expressions] and [Python] in [Systems Programming].  It was interesting to
-    see a [declarative language] that just required you to format data using
-    some [HTML] tags to describe what the text meant and not worry about
-    control flow or anything complex like that.
+    <div class="thumbnail text-center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uZNRzc3hWvE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
 
-    In fact, because of how easy it is to use your favorite `$EDITOR` to create
-    some [HTML] documents, you decide to make your own personal website using
-    [GitHub Pages].  This is a free service that let's you make a public
-    webpage using static [HTML], which provides a convenient place to highlight
-    your projects and interests!
+    In this musical, there is a song about the peculiar and ridiculous[^1] word
+    [Supercalifragilisticexpialidocious].  The children thought this word was
+    **hilarious** and asked [Alexa] to play the song over and over[^2].
+    Eventually, they asked [Alexa] to spell the word, but the
+    <strike>spy</strike> <strike>nanny</strike> digital assistant didn't
+    understand their command, so the children (begrudgingly) resorted to asking
+    their parents, who wrote down the word for them on some paper[^3].
 
-    After writing some custom [HTML] though, you realize that there is one
-    problem when it comes to writing [HTML] by hand... it is sometimes
-    difficult to keep track of all of the [HTML] tags and make sure that they
-    are **balanced**.
+    Looking at the word on paper, the children realized they could form many
+    smaller words from the letters in [Supercalifragilisticexpialidocious].
+    For instance, they could form the word `is` three times, `ace` twice, and
+    `rage` once using the letters in [Supercalifragilisticexpialidocious] only
+    up to the number times they occurred in the original word.
 
-    For instance, the following is considered **balanced**:
+    Knowing that their father has a bunch of students who do that computer
+    programming thing, they asked him to request that you write a program that
+    determines the number of times a word could be formed out of the letters of
+    another word.
 
-        :::html
-        The <i>quick</i> brown fox jumps over the <b>lazy</b> dog
-
-    That is, the *opening* of each tag (ie. `<i>` or `<b>`) is followed by the
-    closing of each tag (ie. `</i>` or `</b>`).
-
-    The following, however, is not **balanced**:
-
-        :::html
-        The <i><u>quick</i></u> brown fox jumps over the <b>lazy</b> dog
-
-    In this example, the `<u>` tag is followed by the `</i>` closing tag before
-    it encounters its corresponding `</u>` closing tag, and is thus considered
-    **unbalanced**.
-
-    Your job is to write a simple [HTML] **linter** that checks if tags are
-    properly **balanced**.
-
-    [Systems Programming]: https://www3.nd.edu/~pbui/teaching/cse.20289.sp22
-    [HTML]: https://developer.mozilla.org/en-US/docs/Web/HTML
-    [declarative language]: https://en.wikipedia.org/wiki/Declarative_programming
-    [Python]: https://www.python.org/
-    [regular expressions]: https://en.wikipedia.org/wiki/Regular_expression
-    [GitHub Pages]: https://guides.github.com/features/pages/
+    [The Greatest Showman]: https://www.imdb.com/title/tt1485796/
+    [Movies on the Lawn]:   https://www.cityofirvine.org/news-media/news-article/celebrate-summer-movies-lawn-great-park
+    [Orange County Great Park]: http://www.cityofirvine.org/orange-county-great-park
+    [Mary Poppins]:         https://www.imdb.com/title/tt0058331/?ref_=fn_al_tt_1
+    [Supercalifragilisticexpialidocious]: https://en.wikipedia.org/wiki/Supercalifragilisticexpialidocious
+    [Alexa]: https://developer.amazon.com/alexa
 
     ## Input
 
-    The input consists of a series of lines that may or may not contain
-    multiple [HTML] tags.
-
-    Here is an example input:
+    The input will be a series of space-separated word pairs, `s1` and `s2`,
+    with one pair per line.  Here is an example input:
 
         ::text
-        A <tt>tag</tt>
-        A <tt>tag
-        A <b><tt>tag</tt></b>
-        A <b><tt>tag</b></tt>
-
-    <div class="alert alert-warning" markdown="1">
-
-    **Note**: You are only concerned with the tags and not with any of the
-    text.  Likewise, there are **no attributes** in these tags (eg. you may
-    assume the tags are in the form `<TAG>` and `</TAG>`.
-
-    </div>
+        supercalifragilisticexpialidocious is
+        supercalifragilisticexpialidocious ace
+        supercalifragilisticexpialidocious rage
 
     ## Output
 
-    For each line of [HTML], you are to determine if the tags on that line is
-    balanced or not and report the result.
+    For each pair of words, your program is to determine how many times `s2`
+    can be formed using the letters in `s1` (where each letter in `s1` is only
+    used up to the number of times it appears in `s1`) and print out that
+    number.
 
     Here is the output for the example input above:
 
         ::text
-        Balanced
-        Unbalanced
-        Balanced
-        Unbalanced
+        3
+        2
+        1
 
     <div class="alert alert-danger" markdown="1">
     #### <i class="fa fa-balance-scale"></i> Algorithmic Complexity
 
     For each input test case, your solution should have the following targets:
 
-    <table class="table table-striped table-bordered" style="background-color: white" markdown="1">
+    <table class="table table-striped table-bordered" style="background-color: white" markdown="1" markdown="1">
     <tbody markdown="1">
     <tr markdown="1">
       <td width="125px" markdown="1">**Time Complexity**</td>
-      <td markdown="1">`O(N)`, where `N` corresponds to the length of the input string.</td>
+      <td markdown="1">`O(S1 + S2)`, where `S1` and `S2` correspond to the lengths of each word in the input pair.
     </tr>
     <tr markdown="1">
       <td markdown="1">**Space Complexity**</td>
-      <td markdown="1">`O(N)`, where `N` corresponds to the length of the input string.</td>
+      <td markdown="1">`O(1)`</td>
     </tr>
     </tbody>
     </table>
@@ -112,10 +91,10 @@ body:       |
 
     ## Submission
 
-    To submit your work, follow the same procedure you used for [Reading 00]:
+    To submit your work, follow the same procedure you used for [Reading 01]:
 
         :::bash
-        $ cd path/to/cse-30872-fa24-assignments     # Go to assignments repository
+        $ cd path/to/cse-30872-su23-assignments     # Go to assignments repository
         $ git checkout master                       # Make sure we are on master
         $ git pull --rebase                         # Pull any changes from GitHub
 
@@ -138,20 +117,22 @@ body:       |
            Score 6.00 / 6.00
 
         $ curl -F source=@challenge02/program.cpp https://dredd.h4x0r.space/code/cse-30872-fa24/challenge02
-        {"result": "Success", "score": 6, "time": 0.016292572021484375, "value": 6, "status": 0}
+        {"result": "Success", "score": 6, "time": 0.0016994476318359375, "value": 6, "status": 0}
 
     <div class="alert alert-success" markdown="1">
     #### <i class="fa fa-github"></i> Pull Request
 
-    Once you have committed your work and pushed it to [GitHub], remember to
-    create a **pull request** and assign it to the appropriate teaching
-    assistant from the [Reading 01 TA List].
-
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
     </div>
 
     [GitHub]:           https://github.com
     [HackerRank]:       https://www.hackerrank.com
     [LeetCode]:         https://leetcode.com
-    [Reading 00]:       reading00.html
+    [Reading 01]:       reading01.html
+    [DuckDuckGo]:       https://duckduckgo.com/
     [curl]:             https://curl.haxx.se/
-    [Reading 01 TA List]: reading01_tas.html
+
+    [^1]: Quite atrocious; makes you sound precocious.
+    [^2]: I hope the NSA likes Disney musicals.
+    [^3]: After consulting the spellchecker in the cloud (ie. [DuckDuckGo]).

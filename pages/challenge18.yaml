@@ -1,4 +1,4 @@
-title:      "Challenge 18: Dependencies"
+title:      "Challenge 18: Anna's Prerequisites"
 icon:       fa-code
 navigation:
   - name: "Home"
@@ -8,124 +8,162 @@ internal:
 external:
 body:       |
 
-    <img src="static/img/challenge18-dependencies.png" class="img-responsive pull-right" style="padding-left: 10px; width: 150px;">
+    <img src="static/img/challenge19-anna.jpg" class="img-responsive img-rounded pull-right">
 
-    Deckard is special.  Not only did take **Systems Programming** for fun[^1]
-    as an **ACMS** major, he also likes to install esoteric operating systems
-    on his **Librem 13**[^2].  Tired of running mainstream [Linux] operating
-    systems and actually having his hardware work, he has decided to try out a
-    [BSD], one of the original free and open source **Unix** operating systems.
+    [Anna] has made a mistake and she knows it.  She really knows it.  Instead
+    of listening to her heart and being an English major[^1], where she could
+    **study everything, and do anything**, she decided to do the practical
+    thing and grind through [Computer Science and Engineering] (with a brief
+    detour through [Chemical Engineering][^2]).
 
-    Things were going well... until he tried to build software not supported
-    by the primitive package manager on his [BSD] system.  In particular,
-    Deckard wants to install `jailbreak`, which is a [rootkit] that escapes the
-    hallowed [jails] on [FreeBSD].
+    Don't get her wrong.  She **does** enjoy coding, learning about how
+    technology works, and solving programming challenges, but... she just would
+    much rather **read books**[^3] or **write stories**.  In her mind:
 
-    Unfortunately, the program has a number of dependencies that must be
-    compiled and installed before he can even build `jailbreak`.  For example,
-    given the following `MANIFEST.json`:
+    > [Computer Science and Engineering] are **interesting**, but **reading** and
+    **writing** are **fun**.
 
-        :::json
-        {
-          "jailbreak": ["smuggler"],
-          "chroot": ["smuggler","laughing","marooning"],
-          "leftpad": ["smuggler"],
-          "sudo": ["marooning","ethological","laughing"],
-          "figlet": ["ethological"],
-          "cmatrix": ["laughing","marooning"],
-          "cowsay": ["smuggler"],
-          "smuggler": ["laughing","ethological","marooning"],
-          "laughing": ["ethological","marooning"],
-          "marooning": ["encountering"],
-          "ethological": [],
-          "encountering": []
-        }
+    Anyway, while reflecting on this mistake during her [Epic] internship, she
+    decides she just has to see her degree to completion and resolves to make
+    the most of her remaining time left in the program.  The only real issue
+    left, of course, is getting into the few interesting and fun classes in the
+    [Computer Science and Engineering] curriculum.
 
-    After parsing this input and generating the dependency graph on the right,
-    it is clear that `jailbreak` requires `5` packages (ie. smuggler, laughing,
-    ethological, marooning, and encountering) to be built beforehand.
+    To help students figure out what courses they can take and when they can
+    take them, the [Computer Science and Engineering] department provides the
+    following [DAG] for navigating the number of courses the department offers:
 
-    Moreover, looking at the graph it is also clear that package manager can
-    build at most `2` packages concurrently (remember that packages can only be
-    built if all their dependencies have been met).
+    <div class="thumbnail text-center">
+    <a href="https://cse.nd.edu/wp-content/uploads/sites/7/2022/11/CSE-Mapping-all.pdf">
+    <img src="static/img/challenge19-dag.png" class="img-responsive">
+    </a>
+    </div>
 
-    Determining the number of dependencies for the `jailbreak` package and the
-    maximum concurrency for building the packages is a daunting task for an
-    **ACMS** major.  He asks that the "big-brained" **CSE** majors help him out
-    by parsing a set of package dependencies and outputting the number of
-    dependencies and the maximum concurrency.
+    Looking at all the boxes and arrows in the [DAG]... low-key makes [Anna] a
+    bit nauseous and kind of crabby.  She just wants to know:
 
-    [^1]: Weird but true flex.
-    [^2]: You're welcome.
-    [Linux]: https://en.wikipedia.org/wiki/Linux
-    [BSD]: https://en.wikipedia.org/wiki/Berkeley_Software_Distribution
-    [rootkit]: https://en.wikipedia.org/wiki/Rootkit
-    [jails]: https://docs.freebsd.org/en/books/handbook/jails/
-    [FreeBSD]: https://www.freebsd.org/
+    > Given any course, what are the prerequisites to that course and the
+    order in which she should take them.
+
+    For instance, given the ever popular [Compilers], she should take the
+    following courses:
+
+        :::text
+        Discrete Math
+        Fundamentals of Computing
+        Data Structures
+        Systems Programming
+
+    Unfortunately, [Anna] is a bit busy with her [Epic] internship and grading
+    your assignments, so she asks that you write a program that reads in a
+    series of courses dependencies and then answers a series of queries about
+    what the prerequisites for each course are as explained below.
+
+    [Anna]: https://www.linkedin.com/in/anna-klempay-2248071a3
+    [Computer Science and Engineering]: https://cse.nd.edu
+    [Chemical Engineering]: https://cbe.nd.edu
+    [instagram]: https://www.instagram.com/annawhoreads/
+    [Epic]: https://www.epic.com/
+    [DAG]: https://en.wikipedia.org/wiki/Directed_acyclic_graph
+    [Compilers]: http://compilerbook.org
+
+    [^1]: Could have done [BACS](https://altech.nd.edu/programs/ba-in-computer-science/)
+    [^2]: Not an uncommon path.
+    [^3]: And review them on [Instagram](https://instagram.com/annawhoreads)
 
     ## Input
 
-    You will be given a series of package manifests in the following format:
+    The input will consist of multiple course dependencies and queries.
 
-        :::
-        N # Number of packages
-        Package Dependencies
-        Package Dependencies
+    For each input test case, you will first be given a series of course
+    dependencies in the following format:
+
+        :::text
+        N     # Number of courses
+        course1: prerequisite1 prerequisite2
+        course2: prerequisite1 prerequisite2
         ...
 
-    That is, you are first given the number of packages (`N`)` followed by the
-    name of the `package` and a list of its `dependencies` (separated by
-    white-space).
+    After the course dependencies are listed, you will then get a series of
+    course queries in the following format:
+
+        :::text
+        N     # Number of queries
+        course1
+        course2
+        ...
 
     ### Example Input
 
-    Here is an example of the input based on the `MANIFEST.json` above:
+    Here is an example of a single test case with course dependencies and queries:
 
         :::text
-        12
-        jailbreak smuggler
-        chroot smuggler laughing marooning
-        leftpad smuggler
-        sudo marooning ethological laughing
-        figlet ethological
-        cmatrix laughing marooning
-        cowsay smuggler
-        smuggler laughing ethological marooning
-        laughing ethological marooning
-        marooning encountering
-        ethological
-        encountering
-
+        11
+        ld: fc
+        sp: fc
+        ds: dm fc
+        dic: ld
+        ca: ld
+        vlsi: dic ca
+        pp: sp ds
+        os: sp ds
+        tc: ds
+        cp: tc
+        al: tc
+        3
+        os
+        vlsi
+        cp
 
     ## Output
 
-    For each package manifest, you are to output two things:
+    For each input test case, you are to read in the course dependencies, and
+    then process each course query by determining what is the order of the
+    prerequisite courses a student needs to take for the given course:
 
-    1. The number of dependencies required to be built for the `jailbreak`
-    program.  2. The maximum concurrency the build system can exploit in
-    building the dependencies.
+    - Order courses by level or height in the [DAG] (ie. **Logic Design**,
+      **Data Structures**, and **Systems Programming** are all on the same
+      level).
+
+    - Order courses within a level alphabetically (ie. **Data Structures**
+      comes before **Logic Design**, which comes before **Systems
+      Programming**).
+
+    For each query, output the prequisites in the following format:
+
+        :::text
+        {course}: {prequisite1} {prerequisite2}...
 
     ### Example Output
 
-    Here is an example output for the package list above:
+    Given the example input above, here is the expected output:
 
         :::text
-        Number of Dependencies: 5
-        Maximum Concurrency: 2
+        os: dm fc ds sp
+        vlsi: fc ld ca dic
+        cp: dm fc ds tc
+
+    <div class="alert alert-warning" markdown="1">
+
+    **Note**: You must put an empty line **between** the outputs of each graph
+    (series of course dependencies).
+
+    </div>
 
     <div class="alert alert-danger" markdown="1">
     #### <i class="fa fa-balance-scale"></i> Algorithmic Complexity
+
     For each input test case, your solution should have the following targets:
 
     <table class="table table-striped table-bordered" style="background-color: white" markdown="1">
     <tbody markdown="1">
     <tr markdown="1">
       <td markdown="1">**Time Complexity**</td>
-      <td markdown="1">`O(V+E)`, where `V` is the number of packages and `E` is the number of dependencies in **DAG**.</td>
+      <td markdown="1">`O(VlogV)`, where `V` is the number of courses in the graph.</td>
     </tr>
     <tr markdown="1">
       <td markdown="1">**Space Complexity**</td>
-      <td markdown="1">`O(V)`, where `V` is the number of packages.</td>
+      <td markdown="1">`O(V+E)`, where `V` is the number of courses and `E` is the number of edges in the graph.</td>
     </tr>
     </tbody>
     </table>
@@ -139,43 +177,41 @@ body:       |
     To submit your work, follow the same procedure you used for [Reading 01]:
 
         :::bash
-        $ cd path/to/cse-30872-fa24-assignments     # Go to assignments repository
+        $ cd path/to/cse-30872-su23-assignments     # Go to assignments repository
         $ git checkout master                       # Make sure we are on master
         $ git pull --rebase                         # Pull any changes from GitHub
 
-        $ git checkout -b challenge18               # Create and checkout challenge18 branch
+        $ git checkout -b challenge19               # Create and checkout challenge19 branch
 
-        $ $EDITOR challenge18/program.cpp           # Edit your code
+        $ $EDITOR challenge19/program.py            # Edit your code
 
-        $ git add challenge18/program.cpp           # Stage your changes
-        $ git commit -m "challenge18: done"         # Commit your changes
+        $ git add challenge19/program.py            # Stage your changes
+        $ git commit -m "challenge19: done"         # Commit your changes
 
-        $ git push -u origin challenge18            # Send changes to GitHub
+        $ git push -u origin challenge19            # Send changes to GitHub
 
     To check your code, you can use the `.scripts/check.py` script or [curl]:
 
         :::bash
         $ .scripts/check.py
-        Checking challenge18 program.cpp ...
+        Checking challenge19 program.py ...
           Result Success
-            Time 0.06
+            Time 0.03
            Score 6.00 / 6.00
 
-        $ curl -F source=@challenge18/program.cpp https://dredd.h4x0r.space/code/cse-30872-fa24/challenge18
-        {"result": "Success", "score": 6, "time": 0.06185953369140625, "value": 6, "status": 0}
+        $ curl -F source=@challenge19/program.py https://dredd.h4x0r.space/code/cse-30872-su23/challenge19
+        {"result": "Success", "score": 6, "time": 0.03165841102600098, "value": 6, "status": 0}
 
     <div class="alert alert-success" markdown="1">
     #### <i class="fa fa-github"></i> Pull Request
 
     Once you have committed your work and pushed it to [GitHub], remember to
-    create a **pull request** and assign it to the appropriate **teaching
-    assistant** from the [Reading 09 TA List].
+    create a **pull request** and assign it to the **teaching assistant**.
 
     </div>
 
-    [GitHub]:                               https://github.com
-    [Reading 00]:                           reading00.html
-    [Reading 09 TA List]:                   reading09_tas.html
+    [GitHub]:           https://github.com
+    [Reading 01]:       reading01.html
 
     [HackerRank]:       https://www.hackerrank.com
     [LeetCode]:         https://leetcode.com

@@ -102,7 +102,7 @@ body:       |
 
     ## Submission
 
-    To submit your work, follow the same procedure you used for [Reading 00]:
+    To submit your work, follow the same procedure you used for [Reading 02]:
 
         :::bash
         $ cd path/to/cse-30872-fa24-assignments     # Go to assignments repository
