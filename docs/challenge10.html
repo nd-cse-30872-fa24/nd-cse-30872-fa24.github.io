@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Challenge 10: Candies</title>
+	<title>Challenge 10: Seb&#39;s Horchata Hustle</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="static/css/blugold.css" rel="stylesheet">
@@ -35,78 +35,80 @@
 			<li><a href="index.html"><i class="fa fa-gavel"></i> <span class="visible-md-inline visible-lg-inline">Home</span></a></li>
 			
 		    </ul>
-		    <h1><i class="fa fa-code"></i> Challenge 10: Candies</h1>
+		    <h1><i class="fa fa-code"></i> Challenge 10: Seb&#39;s Horchata Hustle</h1>
 		</div>
 	    </div>
 
             
-<p><img src="static/img/challenge10-candy.jpg" class="img-response pull-right" width="400px" style="padding-left: 10px"></p>
-<p>Because most students find the instructor <em>intimidating</em><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, he has
-resorted to all sorts of crazy tricks in an attempt at being more
-<em>inclusive</em> and making his office a more <em>welcoming</em> place.  For instance,
-to make sure <strong>CSE majors</strong> feel at home, he keeps the lights off in his
-office <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> and plays soft folk or indie music <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.  Moreover, he often
-has candy stocked in the <strong>R2D2</strong> and <strong>BB8</strong> containers on his desk <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
-<p>Unfortunately, a problem has arisen: too many <strong>students</strong> are now showing up
-to his office and eating the candy.  Because he wants to reward his
-<strong>favorites</strong><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>, he has decided to give each student a <strong>rating</strong><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> and
-distributes <strong>candies</strong> to each student based on this number.</p>
-<p>As a big believer in the important of <strong>Data Structures</strong>, he has visiting
-students line up in a <strong>queue</strong> and distributes the candy to the students such
-that the following constraints are met:</p>
-<ol>
-<li>
-<p>Every <strong>student</strong> gets at least <strong>one candy</strong>.</p>
-</li>
-<li>
-<p>Every <strong>student</strong> whose <strong>rating</strong> is greater than their neighbors in
-the <strong>queue</strong> should receive more <strong>candy</strong>.</p>
-</li>
-</ol>
-<p>For example, suppose the following students were in the office hours <strong>queue</strong>:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Zephan, Mike, Emory
+<p><img src="static/img/challenge09-seb.jpg" class="pull-right img-responsive" style="padding-left: 10px;"></p>
+<p>Despite securing employment at the international <a href="https://www.apple.com/">fruit farm</a>, <a href="https://www.linkedin.com/in/sgutier5">Seb</a> is not
+quite done hustling yet.  In between <a href="https://knowyourmeme.com/memes/cultures/sigma-grindset-hustle-culture-memes">sigma grinding</a> this summer,
+surveilling peers and colleagues on social media, and experimenting with
+advanced <strong>emoji</strong> generation algorithms, <a href="https://www.linkedin.com/in/sgutier5">Seb</a> has decided to setup a
+booth selling fresh <a href="https://en.wikipedia.org/wiki/Horchata">horchata</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>!</p>
+<p>An enterprising fellow, <a href="https://www.linkedin.com/in/sgutier5">Seb</a> decides to sell each delicious cup of rice
+milk with cinnamon at reasonable price of <code>$5</code><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.  Moreover to keep things
+simple, he only will accept bills in the following denominations: <code>$5</code>, <code>$10</code>,
+and <code>$20</code>.</p>
+<p>Unfortunately, his small business is a bit underresourced, so he doesn't
+have any capital left after making his batch of <a href="https://en.wikipedia.org/wiki/Horchata">horchata</a>.  This means
+that if any customer requires change (ie. pays <code>$10</code> or <code>$20</code> instead of
+<code>$5</code>), he must make change out of the money he has already collected from
+previous customers...  which is quite the challenge in this economy and
+highly dependent on the sequence of customers.</p>
+<p>For instance, given the following sequence of customers, represented by the
+bills they are using to pay for their <a href="https://en.wikipedia.org/wiki/Horchata">horchata</a>:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>5 5 5 10 20
 </code></pre></div>
 
-<p>The instructor may rate the students as:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">1</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">2</span><span style="color: #bbbbbb"></span>
+<p>The first three customers don't need any change because they paid the exact
+amount for a cup of <a href="https://en.wikipedia.org/wiki/Horchata">horchata</a>.  The fourth customer requires <code>$5</code> which is
+fine since you have <code>3</code> of those bills.  The fifth customer requires <code>$15</code>
+which is also fine since you can give them the <code>$10</code> and one of your
+remaining <code>$5</code>.  So in this sequence, <a href="https://www.linkedin.com/in/sgutier5">Seb</a> can successfully provide each
+customer the exact amount of change they each required.</p>
+<p>However, given the following sequence of customers</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">5</span><span style="color: #bbbbbb"> </span><span style="color: #666666">5</span><span style="color: #bbbbbb"> </span><span style="color: #666666">10</span><span style="color: #bbbbbb"> </span><span style="color: #666666">10</span><span style="color: #bbbbbb"> </span><span style="color: #666666">20</span><span style="color: #bbbbbb"></span>
 </code></pre></div>
 
-<p>To meet the <strong>constraints</strong> above, this means he must at least give Zephan
-<code>2</code> candies, Mike <code>1</code> candies, and Emory <code>2</code> candies, for a total of <code>5</code>
-candies.</p>
-<p>After devising this candy distribution scheme, the instructor has become
-distracted with <a href="https://clashroyale.com/">Clash Royale</a> and asks you to write the code to determine
-what is the <strong>minimum number of candies</strong> he needs to distribute given a <strong>queue</strong>
-of <strong>students</strong> and their <strong>corresponding ratings</strong>.</p>
+<p>The first two customers don't need any change because they paid the exact
+amount of a cup of <a href="https://en.wikipedia.org/wiki/Horchata">horchata</a>.  The third customer requires <code>$5</code> which is
+fine since you have two of those bills.  Likewise, the fourth customer also
+requires <code>$5</code> in change which is okay since you have one left.
+Unfortunately, the last customer, requires <code>$15</code> in change, but you can't
+do this since you only have two <code>$10</code> bills left and thus <strong>cannot make
+exact change</strong> for each customer.</p>
+<p>Because of this volatility and to determine if this business model is even
+feasible, <a href="https://www.linkedin.com/in/sgutier5">Seb</a> wants to write a simulator that takes in a sequence of
+customers (represented by the <strong>dollar bills</strong> they are spending) and
+<strong>determines whether or not he can give each customer the correct amount of
+change</strong> despite starting the business with <code>0</code> money.</p>
+<p>Unfortunately, he is busy doing hero office hours late at night in the
+library again and needs you to write the simulator for him.</p>
+<div class="alert alert-info">
+<h4 id="leetcode"><i class="fa fa-code"></i> LeetCode<a class="headerlink" href="#leetcode" title="Permanent link">&para;</a></h4>
+<p>This programming challenge is based on <a href="https://leetcode.com/problems/lemonade-change">860. Lemonade
+Change</a> from <a href="https://leetcode.com">LeetCode</a>.</p>
+</div>
 <h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
-<p>You will be given a series of test inputs where each line consists of a
-<strong>queue</strong> of <code>n</code> <strong>students</strong> (where <code>1 &lt;= n &lt;= 1000</code>) and their
-corresponding <strong>ratings</strong> (where <code>1 &lt;= rating &lt;= 20</code>).</p>
-<p>You should read and process each line of input until the <em>end of the file</em>.</p>
+<p>You will be given a series of input test cases.  Each input test case is a
+sequence of customers and the bills (ie. <code>5</code>, <code>10</code>, or <code>20</code>) they are using
+to pay for their <a href="https://en.wikipedia.org/wiki/Horchata">horchata</a>.</p>
 <h3 id="example-input">Example Input<a class="headerlink" href="#example-input" title="Permanent link">&para;</a></h3>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>1 0 2
-1 2 2
-1 3 2 2 1
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>5 5 5 10 20
+5 5 10 10 20
 </code></pre></div>
 
 <h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
-<p>For each <strong>queue</strong> of <strong>students</strong> and their <strong>ratings</strong>, output the
-<strong>minimum</strong> number of <strong>candies</strong> you need to distribute to the
-<strong>students</strong> to ensure that you meant the constraints above in the following format:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>{Student Queue #}. You need {Minimum # of candies} candies.
-</code></pre></div>
-
+<p>For each input test case, output <code>Yeah</code> if Seb can provide every customer
+in the sequence the correct amount of change.  Otherwise, output <code>Nope</code>.</p>
+<p>Prefix each output with the test case number, starting with <code>1</code>.</p>
 <h3 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h3>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>1. You need 5 candies.
-2. You need 4 candies.
-3. You need 7 candies.
+<p>Here is the output for the example input above:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>1. Yeah
+2. Nope
 </code></pre></div>
 
-<div class="alert alert-info">
-<h4 id="programming-challenges"><i class="fa fa-lightbulb-o"></i> Programming Challenges<a class="headerlink" href="#programming-challenges" title="Permanent link">&para;</a></h4>
-<p>This is based on the <a href="https://leetcode.com/problems/candy/">135. Candy</a>
-problem on <a href="https://leetcode.com">LeetCode</a>.</p>
-</div>
 <div class="alert alert-danger">
 <h4 id="algorithmic-complexity"><i class="fa fa-balance-scale"></i> Algorithmic Complexity<a class="headerlink" href="#algorithmic-complexity" title="Permanent link">&para;</a></h4>
 <p>For each input test case, your solution should have the following targets:</p>
@@ -114,69 +116,57 @@ problem on <a href="https://leetcode.com">LeetCode</a>.</p>
 <tbody>
 <tr>
 <td width="125px"><strong>Time Complexity</strong></td>
-<td><code>O(N)</code> where <code>N</code> is the number of <strong>ratings</strong>.</td>
+<td><code>O(N)</code>, where <code>N</code> is the number of customers in each input case.</td>
 </tr>
 <tr>
 <td><strong>Space Complexity</strong></td>
-<td><code>O(N)</code> where <code>N</code> is the number of <strong>ratings</strong>.</td>
+<td><code>O(N)</code>, where <code>N</code> is the number of customers in each input case.</td>
 </tr>
 </tbody>
 </table>
 <p>Your solution may be below the targets, but it <strong>should not exceed them</strong>.</p>
 </div>
 <h2 id="submission">Submission<a class="headerlink" href="#submission" title="Permanent link">&para;</a></h2>
-<p>To submit your work, follow the same procedure you used for <a href="reading00.html">Reading 00</a>:</p>
+<p>To submit your work, follow the same procedure you used for <a href="reading01.html">Reading 01</a>:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>$ <span style="color: #008000">cd</span> path/to/cse-30872-fa24-assignments     <span style="color: #3D7B7B; font-style: italic"># Go to assignments repository</span>
 $ git checkout master                       <span style="color: #3D7B7B; font-style: italic"># Make sure we are on master</span>
 $ git pull --rebase                         <span style="color: #3D7B7B; font-style: italic"># Pull any changes from GitHub</span>
 
-$ git checkout -b challenge10               <span style="color: #3D7B7B; font-style: italic"># Create and checkout challenge10 branch</span>
+$ git checkout -b challenge10               <span style="color: #3D7B7B; font-style: italic"># Create and checkout challenge09 branch</span>
 
 $ <span style="color: #19177C">$EDITOR</span> challenge10/program.cpp           <span style="color: #3D7B7B; font-style: italic"># Edit your code</span>
 
 $ git add challenge10/program.cpp           <span style="color: #3D7B7B; font-style: italic"># Stage your changes</span>
-$ git commit -m <span style="color: #BA2121">&quot;challenge10: done&quot;</span>         <span style="color: #3D7B7B; font-style: italic"># Commit your changes</span>
+$ git commit -m <span style="color: #BA2121">&quot;challenge09: done&quot;</span>         <span style="color: #3D7B7B; font-style: italic"># Commit your changes</span>
 
 $ git push -u origin challenge10            <span style="color: #3D7B7B; font-style: italic"># Send changes to GitHub</span>
 </code></pre></div>
 
 <p>To check your code, you can use the <code>.scripts/check.py</code> script or <a href="https://curl.haxx.se/">curl</a>:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>$ .scripts/check.py
-Checking challenge10 program.cpp ...
+Checking challenge10 program.c ...
   Result Success
-    Time <span style="color: #666666">0</span>.06
+    Time <span style="color: #666666">0</span>.00
    Score <span style="color: #666666">6</span>.00 / <span style="color: #666666">6</span>.00
 
 $ curl -F <span style="color: #19177C">source</span><span style="color: #666666">=</span>@challenge10/program.cpp https://dredd.h4x0r.space/code/cse-30872-fa24/challenge10
-<span style="color: #666666">{</span><span style="color: #BA2121">&quot;result&quot;</span>: <span style="color: #BA2121">&quot;Success&quot;</span>, <span style="color: #BA2121">&quot;score&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;time&quot;</span>: <span style="color: #666666">0</span>.06372570991516113, <span style="color: #BA2121">&quot;value&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;status&quot;</span>: <span style="color: #666666">0}</span>
+<span style="color: #666666">{</span><span style="color: #BA2121">&quot;result&quot;</span>: <span style="color: #BA2121">&quot;Success&quot;</span>, <span style="color: #BA2121">&quot;score&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;time&quot;</span>: <span style="color: #666666">0</span>.0033686161041259766, <span style="color: #BA2121">&quot;value&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;status&quot;</span>: <span style="color: #666666">0}</span>
 </code></pre></div>
 
 <div class="alert alert-success">
 <h4 id="pull-request"><i class="fa fa-github"></i> Pull Request<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h4>
 <p>Once you have committed your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
-create a <strong>pull request</strong> and assign it to the appropriate <strong>teaching
-assistant</strong> from the <a href="reading05_tas.html">Reading 05 TA List</a>.</p>
+create a <strong>pull request</strong> and assign it to the <strong>teaching assistant</strong>.</p>
 </div>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>Very weird.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>It's this sort of hustle that earned <a href="https://www.linkedin.com/in/sgutier5">Seb</a> the <a href="https://twitter.com/pnutzh4x0r/status/1660381814236631041">faculty choice award</a>
+  at graduation!&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>Day star bad.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-<li id="fn:3">
-<p><a href="https://www.youtube.com/watch?v=e5ZUfzJoG1E">Andrew McMahon in the Wilderness - So Close</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:4">
-<p>Thank you based <code>lychee</code>.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
-</li>
-<li id="fn:5">
-<p>Despite what <code>bobbit</code> says, I don't have favorites.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
-</li>
-<li id="fn:6">
-<p>I would never.  Probably.  Maybe.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<p>Inflation is bad.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

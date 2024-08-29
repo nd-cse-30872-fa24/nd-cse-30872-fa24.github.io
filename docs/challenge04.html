@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Challenge 04: Concurrent Events</title>
+	<title>Challenge 04: Selina&#39;s Medicine Bottles</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="static/css/blugold.css" rel="stylesheet">
@@ -35,122 +35,181 @@
 			<li><a href="index.html"><i class="fa fa-gavel"></i> <span class="visible-md-inline visible-lg-inline">Home</span></a></li>
 			
 		    </ul>
-		    <h1><i class="fa fa-code"></i> Challenge 04: Concurrent Events</h1>
+		    <h1><i class="fa fa-code"></i> Challenge 04: Selina&#39;s Medicine Bottles</h1>
 		</div>
 	    </div>
 
             
-<p><img src="https://engineering.nd.edu/wp-content/uploads/2020/06/Bualuan-Ramzi-HS.2-300x300.jpg" class="pull-right img-rounded" width="200px"></p>
-<p>Our beloved <a href="https://engineering.nd.edu/faculty/ramzi-bualuan/">Ramzi</a> needs your help! As the <a href="https://cse.nd.edu">CSE</a> director of undergraduate
-studies, he is in charge with scheduling numerous classes, meetings, and
-events for the faculty, staff, and students of the department.  Given the
-<strong>limited</strong> amount of space the department has, it is often tricky to
-reserve the necessary classrooms or meeting spaces required for different
-events.</p>
-<p>One particular problem <a href="https://engineering.nd.edu/faculty/ramzi-bualuan/">Ramzi</a> has in scheduling events is determining how
-many rooms he actually needs when there are possibly <strong>concurrent events</strong>.
-That is, when there are multiple events with overlapping <strong>time
-intervals</strong>, it can be difficult for him to determine exactly how many
-rooms he actually needs to reserve.</p>
-<p>Therefore, he needs you to write a program that does the following:</p>
-<blockquote>
-<p>Determine the <strong>maximum number of concurrent events</strong> given a series of
-<strong>time intervals</strong>.</p>
-</blockquote>
-<p>For instance, suppose he had to arrange meeting spaces for the following
-events:</p>
-<table class="table table-striped table-bordered">
-  <thead>
-    <th>Event</th>
-    <th>Start</th>
-    <th>Stop</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Operating System Principles</td>
-      <td>1</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Theory of Computing</td>
-      <td>2</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>Computer Architecture</td>
-      <td>3</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>Programming Paradigms</td>
-      <td>4</td>
-      <td>6</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="static/img/challenge05-snie.jpg" class="pull-right img-responsive" style="padding-left: 10px;"></p>
+<p>As usual, <a href="https://www.instagram.com/sel.nie/">Selina</a> is having <strong>tummy troubles</strong>.  Maybe she ate <em>dairy</em>
+despite having an intolerance<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.  Or maybe she ran around the lake
+despite not having eaten<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.  Or maybe she is stressed out because the
+instructor hasn't written that sixteenth letter of recommendation yet<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.
+Or maybe she simply just ate at the dining hall<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.  Either way, her
+stomach is not happy and she needs to find some <strong>medicine</strong> to calm it
+down.</p>
+<p>Unfortunately, <a href="https://www.instagram.com/sel.nie/">Selina</a> takes a lot of medication.  Like, a lot.  Perhaps
+too many.  In fact, her backpack is a portable pharmacy<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>... a mini <a href="https://uhs.nd.edu/">St.
+Liam's</a>.  Because she has so many medicine <strong>bottles</strong>, she decides to
+organize them according to the following rules.</p>
+<ol>
+<li>
+<p>Each <strong>bottle</strong> has three attributes: <code>medication</code> name, bottle <code>size</code>,
+  and pill <code>type</code>.</p>
+<ul>
+<li><code>size</code>: can be <code>small</code>, <code>medium</code>, or <code>large</code></li>
+<li><p><code>type</code>: can be <code>gel</code> or <code>tablet</code></p></li>
+</ul>
+</li>
+<li>
+<p>She wants to group all the bottles of the same <code>type</code> together with
+<code>gel</code> pills coming before <code>tablet</code> pills.</p>
+</li>
+<li>
+<p>Within each <code>type</code> she wants to arrange the <strong>bottles</strong> in <strong>ascending</strong>
+order <strong>alphabetically</strong> by <code>medication</code> name.</p>
+</li>
+<li>
+<p>If any of the <strong>bottles</strong> have the same <code>medication</code> name, then she
+wants to order them by in <strong>ascending</strong> order according to <code>size</code> (i.e.
+<code>small</code>, <code>medium</code>, then <code>large</code>).</p>
+</li>
+</ol>
+<p>Of course, she is too busy <a href="https://en.wikipedia.org/wiki/Girlboss">girlbossing</a> to actually do the organization
+herself.  Instead, she wants you to do the work for her so she can go
+socialize, take care of <a href="https://residentiallife.nd.edu/undergraduate/halls/howard-hall/">ducks</a>, or play with <a href="https://www.instagram.com/the_diary_of_indy/">Indy</a>.</p>
+<h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
+<p>You will be given a series of input test cases, in a stream, each representing a
+collection of bottles you need to arrange according to the rules described
+above.</p>
+<p>Each input test case will consist of two parts.  The first line is an
+integer <code>n</code> which denotes how many bottles there are in the collection.  This
+is then followed by a series of <code>n</code> bottles in the following format:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>MEDICATION_NAME BOTTLE_SIZE PILL_TYPE
+</code></pre></div>
 
-<p>One way to solve this is by arranging the events graphically as shown below
-on the left.  Once laid out in this manner, it becomes clear that there are
-two times where there are a maximum of <code>3</code> events happening at once.
-Therefore <a href="https://engineering.nd.edu/faculty/ramzi-bualuan/">Ramzi</a> would have to reserve three rooms for these concurrent
-events.</p>
-<div class="thumbnail">
-<img src="static/img/challenge04-concurrent-events.png" class="img-responsive">
-</div>
+<p>Here is an example input:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>10
+Omeprazole large gel
+Metoprolol small gel
+Clopidogrel medium tablet
+Clopidogrel large tablet
+Oxycodone large gel
+Clopidogrel small tablet
+Furosemide large tablet
+Clonidine large tablet
+Simvastatin medium tablet
+Amoxicillin medium tablet
+</code></pre></div>
 
 <div class="alert alert-warning">
-<h4 id="separate-rooms"><i class="fa fa-users"></i> Separate Rooms<a class="headerlink" href="#separate-rooms" title="Permanent link">&para;</a></h4>
-<p>While it is tempting to schedule the same room for back-to-back events such
-as in the intervals <code>(1, 3)</code> and <code>(3, 5)</code>, as you all know, it takes some
-time for people to both enter and leave a room.  Therefore, events that
-<strong>start</strong> at the same time as another event <strong>ends</strong> would require a
-<strong>separate room</strong> to accommodate the flow of traffic.  That is why the test
-case on the left requires <code>3</code> rooms instead of <code>2</code>.</p>
+<p><strong>Note</strong>: As described above, each <strong>bottle</strong> can be one of three <code>sizes</code>:
+<code>small</code>, <code>medium</code>, or <code>large</code>.  Likewise, each <strong>bottle</strong> can be one of
+two <code>types</code>: <code>gel</code> or <code>tablet</code>.</p>
 </div>
-<p>Because you are <a href="https://cse.nd.edu">CSE</a> students, however, <a href="https://engineering.nd.edu/faculty/ramzi-bualuan/">Ramzi</a> wants you to automate the
-process of determining the maximum number of concurrent events given a
-series of time intervals in software and he wants you to make sure it runs
-in <code>O(nlogn)</code> time (<em>for each sequence of time intervals</em>).</p>
-<h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
-<p>You will be given a series of events in the following format:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>N             <span style="color: #3D7B7B; font-style: italic"># Number of events</span>
-Start1 Stop1  <span style="color: #3D7B7B; font-style: italic"># Event 1 start and stop times</span>
-...
-StartN StopN  <span style="color: #3D7B7B; font-style: italic"># Event 1 start and stop times</span>
-</code></pre></div>
-
-<p>That is, the first line contains <code>N</code> or the number of events in the test
-case, followed by <code>N</code> events which consist of a pair of start and stop
-times (integers).</p>
-<p>Here is an example input:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>4
-1 3
-2 4
-3 5
-4 6
-4
-2 4
-1 5
-1 3
-2 6
-</code></pre></div>
-
-<p>This input corresponds to the example described above with an additional
-test case depicted above on the right.</p>
 <h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
-<p>For each test case, output the maximum number of concurrent events for that test
-case as shown in the sample output below:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>1. Maximum number of concurrent events is 3
-2. Maximum number of concurrent events is 4
+<p>For each input test case, you are to order the bottles as described above
+and then display a <strong>silhouette</strong> of the bottles in the cabinet in the
+ordered arranged.</p>
+<p>For each bottle size, use the following <strong>letter</strong> to represent the bottle
+based on its <strong>size</strong> in the <strong>silhouette</strong>:</p>
+<table class="table table-striped table-bordered" style="background-color: white">
+<tbody>
+<tr>
+<td><strong>small</strong></td>
+<td><code>.</code></td>
+</tr>
+<tr>
+<td><strong>medium</strong></td>
+<td><code>:</code></td>
+</tr>
+<tr>
+<td><strong>large</strong></td>
+<td><code>|</code></td>
+</tr>
+</tbody>
+</table>
+<p>Here is the output for the example input above:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>.||:|.:||:
 </code></pre></div>
 
-<p>Be sure to prefix each line of output with the test case number (starting
-with <code>1</code>).</p>
-<div class="alert alert-info">
-<h4 id="programming-challenges"><i class="fa fa-lightbulb-o"></i> Programming Challenges<a class="headerlink" href="#programming-challenges" title="Permanent link">&para;</a></h4>
-<p>This problem is inspired by "Problem 14.5" in <a href="http://elementsofprogramminginterviews.com/">Elements of Programming
-Interviews</a>.</p>
-</div>
+<p>Arranging the input of <strong>bottles</strong> by the rules described above, would give the
+following sequence of <strong>bottles</strong>:</p>
+<table class="table table-striped table-bordered" style="background-color: white">
+<thead>
+<th>Medication</th>
+<th>Size</th>
+<th>Type</th>
+<th>Letter</th>
+</thead>
+<tbody>
+<tr>
+<td><strong>Metoprolol</strong></td>
+<td><strong>small</strong></td>
+<td><strong>gel</strong></td>
+<td><code>.</code></td>
+</tr>
+<tr>
+<td><strong>Omeprazole</strong></td>
+<td><strong>large</strong></td>
+<td><strong>gel</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr>
+<td><strong>Oxycodone</strong></td>
+<td><strong>large</strong></td>
+<td><strong>gel</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr>
+<td><strong>Amoxicillin</strong></td>
+<td><strong>medium</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>:</code></td>
+</tr>
+<tr>
+<td><strong>Clonidine</strong></td>
+<td><strong>large</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr>
+<td><strong>Clopidogrel</strong></td>
+<td><strong>small</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>.</code></td>
+</tr>
+<tr>
+<td><strong>Clopidogrel</strong></td>
+<td><strong>medium</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>:</code></td>
+</tr>
+<tr>
+<td><strong>Clopidogrel</strong></td>
+<td><strong>large</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr>
+<td><strong>Furosemide</strong></td>
+<td><strong>large</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr>
+<td><strong>Simvastatin</strong></td>
+<td><strong>medium</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>:</code></td>
+</tr>
+</tbody>
+</table>
+<p>As can be seen, the bottles are arranged by pill <code>type</code>, then
+alphabetically <code>medication</code> name, and then by bottle <code>size</code>.</p>
+<p>Once arranged properly, simply combine all the <code>letters</code> corresponding to
+the bottle <code>sizes</code> into a single line to form the <strong>silhouette</strong> and print
+that out.</p>
 <div class="alert alert-danger">
 <h4 id="algorithmic-complexity"><i class="fa fa-balance-scale"></i> Algorithmic Complexity<a class="headerlink" href="#algorithmic-complexity" title="Permanent link">&para;</a></h4>
 <p>For each input test case, your solution should have the following targets:</p>
@@ -158,23 +217,23 @@ Interviews</a>.</p>
 <tbody>
 <tr>
 <td width="125px"><strong>Time Complexity</strong></td>
-<td><code>O(E*log(E))</code>, where <code>E</code> is the number of events.</td>
+<td><code>O(Nlog(N))</code>, where <code>N</code> is the number of bottles for each input test case.</td>
 </tr>
 <tr>
 <td><strong>Space Complexity</strong></td>
-<td><code>O(1)</code></td>
+<td><code>O(N)</code>, where <code>N</code> is the number of bottles for each input test case.</td>
 </tr>
 </tbody>
 </table>
 <p>Your solution may be below the targets, but it <strong>should not exceed them</strong>.</p>
 </div>
 <h2 id="submission">Submission<a class="headerlink" href="#submission" title="Permanent link">&para;</a></h2>
-<p>To submit your work, follow the same procedure you used for <a href="reading00.html">Reading 00</a>:</p>
+<p>To submit your work, follow the same procedure you used for [Reading 02]:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>$ <span style="color: #008000">cd</span> path/to/cse-30872-fa24-assignments     <span style="color: #3D7B7B; font-style: italic"># Go to assignments repository</span>
 $ git checkout master                       <span style="color: #3D7B7B; font-style: italic"># Make sure we are on master</span>
 $ git pull --rebase                         <span style="color: #3D7B7B; font-style: italic"># Pull any changes from GitHub</span>
 
-$ git checkout -b challenge04               <span style="color: #3D7B7B; font-style: italic"># Create and checkout challenge04 branch</span>
+$ git checkout -b challenge04               <span style="color: #3D7B7B; font-style: italic"># Create and checkout challenge05 branch</span>
 
 $ <span style="color: #19177C">$EDITOR</span> challenge04/program.cpp           <span style="color: #3D7B7B; font-style: italic"># Edit your code</span>
 
@@ -188,18 +247,37 @@ $ git push -u origin challenge04            <span style="color: #3D7B7B; font-st
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>$ .scripts/check.py
 Checking challenge04 program.cpp ...
   Result Success
-    Time <span style="color: #666666">0</span>.16
+    Time <span style="color: #666666">0</span>.62
    Score <span style="color: #666666">6</span>.00 / <span style="color: #666666">6</span>.00
 
 $ curl -F <span style="color: #19177C">source</span><span style="color: #666666">=</span>@challenge04/program.cpp https://dredd.h4x0r.space/code/cse-30872-fa24/challenge04
-<span style="color: #666666">{</span><span style="color: #BA2121">&quot;result&quot;</span>: <span style="color: #BA2121">&quot;Success&quot;</span>, <span style="color: #BA2121">&quot;score&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;time&quot;</span>: <span style="color: #666666">0</span>.16451787948608398, <span style="color: #BA2121">&quot;value&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;status&quot;</span>: <span style="color: #666666">0}</span>
+<span style="color: #666666">{</span><span style="color: #BA2121">&quot;result&quot;</span>: <span style="color: #BA2121">&quot;Success&quot;</span>, <span style="color: #BA2121">&quot;score&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;time&quot;</span>: <span style="color: #666666">0</span>.6157994270324707, <span style="color: #BA2121">&quot;value&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;status&quot;</span>: <span style="color: #666666">0}</span>
 </code></pre></div>
 
 <div class="alert alert-success">
 <h4 id="pull-request"><i class="fa fa-github"></i> Pull Request<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h4>
 <p>Once you have committed your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
-create a <strong>pull request</strong> and assign it to the appropriate <strong>teaching
-assistant</strong> from the <a href="reading02_tas.html">Reading 02 TA List</a>.</p>
+create a <strong>pull request</strong> and assign it to the <strong>teaching assistant</strong>.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Me too :|&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Negative feedback loop.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Never again.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>True story.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Just Kidding.  Maybe.  Not really.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
 
 

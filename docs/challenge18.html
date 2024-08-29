@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Challenge 18: Dependencies</title>
+	<title>Challenge 18: Anna&#39;s Prerequisites</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="static/css/blugold.css" rel="stylesheet">
@@ -35,92 +35,125 @@
 			<li><a href="index.html"><i class="fa fa-gavel"></i> <span class="visible-md-inline visible-lg-inline">Home</span></a></li>
 			
 		    </ul>
-		    <h1><i class="fa fa-code"></i> Challenge 18: Dependencies</h1>
+		    <h1><i class="fa fa-code"></i> Challenge 18: Anna&#39;s Prerequisites</h1>
 		</div>
 	    </div>
 
             
-<p><img src="static/img/challenge18-dependencies.png" class="img-responsive pull-right" style="padding-left: 10px; width: 150px;"></p>
-<p>Deckard is special.  Not only did take <strong>Systems Programming</strong> for fun<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
-as an <strong>ACMS</strong> major, he also likes to install esoteric operating systems
-on his <strong>Librem 13</strong><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.  Tired of running mainstream <a href="https://en.wikipedia.org/wiki/Linux">Linux</a> operating
-systems and actually having his hardware work, he has decided to try out a
-<a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a>, one of the original free and open source <strong>Unix</strong> operating systems.</p>
-<p>Things were going well... until he tried to build software not supported
-by the primitive package manager on his <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> system.  In particular,
-Deckard wants to install <code>jailbreak</code>, which is a <a href="https://en.wikipedia.org/wiki/Rootkit">rootkit</a> that escapes the
-hallowed <a href="https://docs.freebsd.org/en/books/handbook/jails/">jails</a> on <a href="https://www.freebsd.org/">FreeBSD</a>.</p>
-<p>Unfortunately, the program has a number of dependencies that must be
-compiled and installed before he can even build <code>jailbreak</code>.  For example,
-given the following <code>MANIFEST.json</code>:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;jailbreak&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;smuggler&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;chroot&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;smuggler&quot;</span>,<span style="color: #BA2121">&quot;laughing&quot;</span>,<span style="color: #BA2121">&quot;marooning&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;leftpad&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;smuggler&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;sudo&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;marooning&quot;</span>,<span style="color: #BA2121">&quot;ethological&quot;</span>,<span style="color: #BA2121">&quot;laughing&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;figlet&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;ethological&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;cmatrix&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;laughing&quot;</span>,<span style="color: #BA2121">&quot;marooning&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;cowsay&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;smuggler&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;smuggler&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;laughing&quot;</span>,<span style="color: #BA2121">&quot;ethological&quot;</span>,<span style="color: #BA2121">&quot;marooning&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;laughing&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;ethological&quot;</span>,<span style="color: #BA2121">&quot;marooning&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;marooning&quot;</span>:<span style="color: #bbbbbb"> </span>[<span style="color: #BA2121">&quot;encountering&quot;</span>],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;ethological&quot;</span>:<span style="color: #bbbbbb"> </span>[],<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">&quot;encountering&quot;</span>:<span style="color: #bbbbbb"> </span>[]<span style="color: #bbbbbb"></span>
-}<span style="color: #bbbbbb"></span>
+<p><img src="static/img/challenge19-anna.jpg" class="img-responsive img-rounded pull-right"></p>
+<p><a href="https://www.linkedin.com/in/anna-klempay-2248071a3">Anna</a> has made a mistake and she knows it.  She really knows it.  Instead
+of listening to her heart and being an English major<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, where she could
+<strong>study everything, and do anything</strong>, she decided to do the practical
+thing and grind through <a href="https://cse.nd.edu">Computer Science and Engineering</a> (with a brief
+detour through <a href="https://cbe.nd.edu">Chemical Engineering</a><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>).</p>
+<p>Don't get her wrong.  She <strong>does</strong> enjoy coding, learning about how
+technology works, and solving programming challenges, but... she just would
+much rather <strong>read books</strong><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> or <strong>write stories</strong>.  In her mind:</p>
+<blockquote>
+<p><a href="https://cse.nd.edu">Computer Science and Engineering</a> are <strong>interesting</strong>, but <strong>reading</strong> and
+<strong>writing</strong> are <strong>fun</strong>.</p>
+</blockquote>
+<p>Anyway, while reflecting on this mistake during her <a href="https://www.epic.com/">Epic</a> internship, she
+decides she just has to see her degree to completion and resolves to make
+the most of her remaining time left in the program.  The only real issue
+left, of course, is getting into the few interesting and fun classes in the
+<a href="https://cse.nd.edu">Computer Science and Engineering</a> curriculum.</p>
+<p>To help students figure out what courses they can take and when they can
+take them, the <a href="https://cse.nd.edu">Computer Science and Engineering</a> department provides the
+following <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">DAG</a> for navigating the number of courses the department offers:</p>
+<div class="thumbnail text-center">
+<a href="https://cse.nd.edu/wp-content/uploads/sites/7/2022/11/CSE-Mapping-all.pdf">
+<img src="static/img/challenge19-dag.png" class="img-responsive">
+</a>
+</div>
+
+<p>Looking at all the boxes and arrows in the <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">DAG</a>... low-key makes <a href="https://www.linkedin.com/in/anna-klempay-2248071a3">Anna</a> a
+bit nauseous and kind of crabby.  She just wants to know:</p>
+<blockquote>
+<p>Given any course, what are the prerequisites to that course and the
+order in which she should take them.</p>
+</blockquote>
+<p>For instance, given the ever popular <a href="http://compilerbook.org">Compilers</a>, she should take the
+following courses:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Discrete Math
+Fundamentals of Computing
+Data Structures
+Systems Programming
 </code></pre></div>
 
-<p>After parsing this input and generating the dependency graph on the right,
-it is clear that <code>jailbreak</code> requires <code>5</code> packages (ie. smuggler, laughing,
-ethological, marooning, and encountering) to be built beforehand.</p>
-<p>Moreover, looking at the graph it is also clear that package manager can
-build at most <code>2</code> packages concurrently (remember that packages can only be
-built if all their dependencies have been met).</p>
-<p>Determining the number of dependencies for the <code>jailbreak</code> package and the
-maximum concurrency for building the packages is a daunting task for an
-<strong>ACMS</strong> major.  He asks that the "big-brained" <strong>CSE</strong> majors help him out
-by parsing a set of package dependencies and outputting the number of
-dependencies and the maximum concurrency.</p>
+<p>Unfortunately, <a href="https://www.linkedin.com/in/anna-klempay-2248071a3">Anna</a> is a bit busy with her <a href="https://www.epic.com/">Epic</a> internship and grading
+your assignments, so she asks that you write a program that reads in a
+series of courses dependencies and then answers a series of queries about
+what the prerequisites for each course are as explained below.</p>
 <h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
-<p>You will be given a series of package manifests in the following format:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>N # Number of packages
-Package Dependencies
-Package Dependencies
+<p>The input will consist of multiple course dependencies and queries.</p>
+<p>For each input test case, you will first be given a series of course
+dependencies in the following format:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>N     # Number of courses
+course1: prerequisite1 prerequisite2
+course2: prerequisite1 prerequisite2
 ...
 </code></pre></div>
 
-<p>That is, you are first given the number of packages (<code>N</code>)<code>followed by the
-name of the</code>package<code>and a list of its</code>dependencies` (separated by
-white-space).</p>
+<p>After the course dependencies are listed, you will then get a series of
+course queries in the following format:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>N     # Number of queries
+course1
+course2
+...
+</code></pre></div>
+
 <h3 id="example-input">Example Input<a class="headerlink" href="#example-input" title="Permanent link">&para;</a></h3>
-<p>Here is an example of the input based on the <code>MANIFEST.json</code> above:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>12
-jailbreak smuggler
-chroot smuggler laughing marooning
-leftpad smuggler
-sudo marooning ethological laughing
-figlet ethological
-cmatrix laughing marooning
-cowsay smuggler
-smuggler laughing ethological marooning
-laughing ethological marooning
-marooning encountering
-ethological
-encountering
+<p>Here is an example of a single test case with course dependencies and queries:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>11
+ld: fc
+sp: fc
+ds: dm fc
+dic: ld
+ca: ld
+vlsi: dic ca
+pp: sp ds
+os: sp ds
+tc: ds
+cp: tc
+al: tc
+3
+os
+vlsi
+cp
 </code></pre></div>
 
 <h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
-<p>For each package manifest, you are to output two things:</p>
-<ol>
-<li>The number of dependencies required to be built for the <code>jailbreak</code>
-program.  2. The maximum concurrency the build system can exploit in
-building the dependencies.</li>
-</ol>
-<h3 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h3>
-<p>Here is an example output for the package list above:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Number of Dependencies: 5
-Maximum Concurrency: 2
+<p>For each input test case, you are to read in the course dependencies, and
+then process each course query by determining what is the order of the
+prerequisite courses a student needs to take for the given course:</p>
+<ul>
+<li>
+<p>Order courses by level or height in the <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">DAG</a> (ie. <strong>Logic Design</strong>,
+  <strong>Data Structures</strong>, and <strong>Systems Programming</strong> are all on the same
+  level).</p>
+</li>
+<li>
+<p>Order courses within a level alphabetically (ie. <strong>Data Structures</strong>
+  comes before <strong>Logic Design</strong>, which comes before <strong>Systems
+  Programming</strong>).</p>
+</li>
+</ul>
+<p>For each query, output the prequisites in the following format:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>{course}: {prequisite1} {prerequisite2}...
 </code></pre></div>
 
+<h3 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h3>
+<p>Given the example input above, here is the expected output:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>os: dm fc ds sp
+vlsi: fc ld ca dic
+cp: dm fc ds tc
+</code></pre></div>
+
+<div class="alert alert-warning">
+<p><strong>Note</strong>: You must put an empty line <strong>between</strong> the outputs of each graph
+(series of course dependencies).</p>
+</div>
 <div class="alert alert-danger">
 <h4 id="algorithmic-complexity"><i class="fa fa-balance-scale"></i> Algorithmic Complexity<a class="headerlink" href="#algorithmic-complexity" title="Permanent link">&para;</a></h4>
 <p>For each input test case, your solution should have the following targets:</p>
@@ -128,57 +161,59 @@ Maximum Concurrency: 2
 <tbody>
 <tr>
 <td><strong>Time Complexity</strong></td>
-<td><code>O(V+E)</code>, where <code>V</code> is the number of packages and <code>E</code> is the number of dependencies in <strong>DAG</strong>.</td>
+<td><code>O(VlogV)</code>, where <code>V</code> is the number of courses in the graph.</td>
 </tr>
 <tr>
 <td><strong>Space Complexity</strong></td>
-<td><code>O(V)</code>, where <code>V</code> is the number of packages.</td>
+<td><code>O(V+E)</code>, where <code>V</code> is the number of courses and <code>E</code> is the number of edges in the graph.</td>
 </tr>
 </tbody>
 </table>
 <p>Your solution may be below the targets, but it <strong>should not exceed them</strong>.</p>
 </div>
 <h2 id="submission">Submission<a class="headerlink" href="#submission" title="Permanent link">&para;</a></h2>
-<p>To submit your work, follow the same procedure you used for [Reading 01]:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>$ <span style="color: #008000">cd</span> path/to/cse-30872-fa24-assignments     <span style="color: #3D7B7B; font-style: italic"># Go to assignments repository</span>
+<p>To submit your work, follow the same procedure you used for <a href="reading01.html">Reading 01</a>:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>$ <span style="color: #008000">cd</span> path/to/cse-30872-su23-assignments     <span style="color: #3D7B7B; font-style: italic"># Go to assignments repository</span>
 $ git checkout master                       <span style="color: #3D7B7B; font-style: italic"># Make sure we are on master</span>
 $ git pull --rebase                         <span style="color: #3D7B7B; font-style: italic"># Pull any changes from GitHub</span>
 
-$ git checkout -b challenge18               <span style="color: #3D7B7B; font-style: italic"># Create and checkout challenge18 branch</span>
+$ git checkout -b challenge19               <span style="color: #3D7B7B; font-style: italic"># Create and checkout challenge19 branch</span>
 
-$ <span style="color: #19177C">$EDITOR</span> challenge18/program.cpp           <span style="color: #3D7B7B; font-style: italic"># Edit your code</span>
+$ <span style="color: #19177C">$EDITOR</span> challenge19/program.py            <span style="color: #3D7B7B; font-style: italic"># Edit your code</span>
 
-$ git add challenge18/program.cpp           <span style="color: #3D7B7B; font-style: italic"># Stage your changes</span>
-$ git commit -m <span style="color: #BA2121">&quot;challenge18: done&quot;</span>         <span style="color: #3D7B7B; font-style: italic"># Commit your changes</span>
+$ git add challenge19/program.py            <span style="color: #3D7B7B; font-style: italic"># Stage your changes</span>
+$ git commit -m <span style="color: #BA2121">&quot;challenge19: done&quot;</span>         <span style="color: #3D7B7B; font-style: italic"># Commit your changes</span>
 
-$ git push -u origin challenge18            <span style="color: #3D7B7B; font-style: italic"># Send changes to GitHub</span>
+$ git push -u origin challenge19            <span style="color: #3D7B7B; font-style: italic"># Send changes to GitHub</span>
 </code></pre></div>
 
 <p>To check your code, you can use the <code>.scripts/check.py</code> script or <a href="https://curl.haxx.se/">curl</a>:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>$ .scripts/check.py
-Checking challenge18 program.cpp ...
+Checking challenge19 program.py ...
   Result Success
-    Time <span style="color: #666666">0</span>.06
+    Time <span style="color: #666666">0</span>.03
    Score <span style="color: #666666">6</span>.00 / <span style="color: #666666">6</span>.00
 
-$ curl -F <span style="color: #19177C">source</span><span style="color: #666666">=</span>@challenge18/program.cpp https://dredd.h4x0r.space/code/cse-30872-fa24/challenge18
-<span style="color: #666666">{</span><span style="color: #BA2121">&quot;result&quot;</span>: <span style="color: #BA2121">&quot;Success&quot;</span>, <span style="color: #BA2121">&quot;score&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;time&quot;</span>: <span style="color: #666666">0</span>.06185953369140625, <span style="color: #BA2121">&quot;value&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;status&quot;</span>: <span style="color: #666666">0}</span>
+$ curl -F <span style="color: #19177C">source</span><span style="color: #666666">=</span>@challenge19/program.py https://dredd.h4x0r.space/code/cse-30872-su23/challenge19
+<span style="color: #666666">{</span><span style="color: #BA2121">&quot;result&quot;</span>: <span style="color: #BA2121">&quot;Success&quot;</span>, <span style="color: #BA2121">&quot;score&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;time&quot;</span>: <span style="color: #666666">0</span>.03165841102600098, <span style="color: #BA2121">&quot;value&quot;</span>: <span style="color: #666666">6</span>, <span style="color: #BA2121">&quot;status&quot;</span>: <span style="color: #666666">0}</span>
 </code></pre></div>
 
 <div class="alert alert-success">
 <h4 id="pull-request"><i class="fa fa-github"></i> Pull Request<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h4>
 <p>Once you have committed your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
-create a <strong>pull request</strong> and assign it to the appropriate <strong>teaching
-assistant</strong> from the <a href="reading09_tas.html">Reading 09 TA List</a>.</p>
+create a <strong>pull request</strong> and assign it to the <strong>teaching assistant</strong>.</p>
 </div>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>Weird but true flex.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Could have done <a href="https://altech.nd.edu/programs/ba-in-computer-science/">BACS</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>You're welcome.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>Not an uncommon path.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>And review them on <a href="https://instagram.com/annawhoreads">Instagram</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
