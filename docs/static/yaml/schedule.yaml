@@ -254,7 +254,10 @@
 
       - date:           Fri 11/01
         topics:         Divide and Conquer
-
+        items:
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a15c6c7a-8d24-4f15-9c8f-b21b010f0870
+            
       - date:           Sun 11/03
         assignments:
           - Challenge 13
