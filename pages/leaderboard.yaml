@@ -21,7 +21,7 @@ body:
 
   <script>
       async function loadLeaderboard() {
-          const response = await fetch('/static/data/leaderboard.json');
+          const response = await fetch('/static/json/leaderboard.json');
           const data = await response.json();
           const table = document.getElementById('leaderboard');
           data.sort((a, b) => b.problems_solved - a.problems_solved); // Sort by problems solved
