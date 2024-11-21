@@ -1,0 +1,4 @@
+[
+    { "student": "Alice", "problems_solved": 15, "last_updated": "2024-11-20" },
+    { "student": "Bob", "problems_solved": 10, "last_updated": "2024-11-19" }
+]
