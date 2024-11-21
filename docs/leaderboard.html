@@ -42,7 +42,7 @@
             
 <h1>Class Leaderboard</h1>
 <table border="1"> <thead> <tr> <th>Student</th> <th>Problems Solved</th> <th>Last Updated</th> </tr> </thead> <tbody id="leaderboard"></tbody> </table>
-<script> async function loadLeaderboard() { const response = await fetch('/static/json/leaderboard.json'); const data = await response.json(); const table = document.getElementById('leaderboard'); data.sort((a, b) => b.problems_solved - a.problems_solved); // Sort by problems solved data.forEach((entry) => { const row = `<tr> <td>${entry.student}</td> <td>${entry.problems_solved}</td> <td>${entry.last_updated}</td> </tr>`; table.innerHTML += row; }); } window.onload = loadLeaderboard; </script>
+<script> async function loadLeaderboard() { const response = await fetch('/static/json/leaderboard.json'); const data = await response.json(); const table = document.getElementById('leaderboard'); data.sort((a, b) => b.problems_solved - a.problems_solved); data.forEach((entry) => { const row = `<tr> <td>${entry.student}</td> <td>${entry.problems_solved}</td> <td>${entry.last_updated}</td> </tr>`; table.innerHTML += row; }); } window.onload = loadLeaderboard; </script>
 
 
 	    <div class="row">
