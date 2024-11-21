@@ -57,7 +57,7 @@
 
 <script>
     async function loadLeaderboard() {
-        const response = await fetch('/static/data/leaderboard.json');
+        const response = await fetch('/static/json/leaderboard.json');
         const data = await response.json();
 
         data.sort((a, b) => b.problems_solved - a.problems_solved);
